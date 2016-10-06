@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>  
+    <class name="fyp.tingli.model.F1DynFlight" table="f_1_dynflight">  
+        <id name="id">   
+        </id>  
+        <property name="create_date"/>  
+        <property name="operation_date"/>  
+        <property name="flight_no"/>
+        <property name="a_or_d"/>
+        <property name="flight_repeat_count"/>
+        <property name="d_or_i"/>
+        <property name="task_code"/>
+        <property name="airline_terminal_code"/>
+        <property name="passenger_terminal_code"/>
+        <property name="aircraft_type_iata"/>
+        <property name="ac_reg_no"/>
+        <property name="flg_vip"/>
+        <property name="std"/>
+        <property name="etd"/>
+        <property name="atd"/>
+        <property name="sta"/>
+        <property name="eta"/>
+        <property name="ata"/>
+        <property name="boarding_status"/>
+        <property name="previous_flight"/>
+        <property name="next_flight"/>
+        <property name="enter_corridor_time"/>
+        <property name="recent_abnormal_status"/>
+        <property name="reported_abnormal"/>
+        <property name="runway"/>
+        <property name="code_share1"/>
+        <property name="code_share2"/>
+        <property name="code_share3"/>
+        <property name="code_share4"/>
+        <property name="code_share5"/>
+        <property name="code_share6"/>
+        <property name="display_finished"/>
+        <many-to-one name="aircraft_terminal_code" class="fyp.tingli.model.F3Terminal" fetch="select" lazy="false">
+          <column name= "aircraft_terminal_code"/>
+        </many-to-one>
+         <many-to-one name="airline_iata" class="fyp.tingli.model.F3Airline" fetch="select" lazy="false">
+          <column name= "airline_iata"/>
+        </many-to-one>
+        <many-to-one name="origin_airport_iata" class="fyp.tingli.model.F3Airport" fetch="select" lazy="false">
+          <column name= "origin_airport_iata"/>
+        </many-to-one>
+        <many-to-one name="dest_airport_iata" class="fyp.tingli.model.F3Airport" fetch="select" lazy="false">
+          <column name= "dest_airport_iata"/>
+        </many-to-one>
+         <many-to-one name="remark" class="fyp.tingli.model.F3Remark" fetch="select" lazy="false">
+          <column name= "remark"/>
+        </many-to-one>
+    
+    </class>  
+</hibernate-mapping>

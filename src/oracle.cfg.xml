@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ 	<session-factory>
+		<!-- 数据库驱动 -->
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<!-- 数据库连接的URL -->
+		<property name="connection.url">jdbc:oracle:thin:@10.125.20.10:1521:orapms</property>
+		<!-- 数据库连接用户名 -->
+		<property name="connection.username">shuniu</property>
+		<!-- 数据库连接密码 -->
+		<property name="connection.password">shu123</property>
+		<!-- Hibernate方言 -->
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<!-- 打印SQL语句 -->
+		<property name="show_sql">true</property>
+		<!-- 映射文件  -->
+		<mapping resource="fyp/tingli/model/hibernate/F1DynFlight.hbm.xml"/>
+		<mapping resource="fyp/tingli/model/hibernate/F3Airline.hbm.xml"/>
+		<mapping resource="fyp/tingli/model/hibernate/F3Airport.hbm.xml"/>
+		<mapping resource="fyp/tingli/model/hibernate/F3Terminal.hbm.xml"/>
+		<mapping resource="fyp/tingli/model/hibernate/RRdt.hbm.xml"/>
+		<mapping resource="fyp/tingli/model/hibernate/RSta.hbm.xml"/>
+		<mapping resource="fyp/tingli/model/hibernate/RStopTime.hbm.xml"/>
+		<mapping resource="fyp/tingli/model/hibernate/F3Remark.hbm.xml"/>
+ 	</session-factory>
+ </hibernate-configuration>
