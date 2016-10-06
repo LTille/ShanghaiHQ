@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>  
+    <class name="fyp.tingli.model.F3Airport" table="f_3_airport">  
+        <id name="airport_iata">   
+        </id>  
+        <property name="airport_icao"/>  
+        <property name="city_iata"/>  
+        <property name="d_or_i"/>
+        <property name="name_xml"/>
+        <property name="distance_from_h"/>
+    </class>  
+</hibernate-mapping>

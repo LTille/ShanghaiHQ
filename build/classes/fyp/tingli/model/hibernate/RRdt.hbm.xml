@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>  
+    <class name="fyp.tingli.model.RRdt" table="R_RDT">  
+        <id name="id">  
+        </id>  
+        <property name="run_date"/>  
+        <property name="train_no"/>  
+        <property name="arrive_train_no"/>
+        <property name="depart_train_no"/>
+        <property name="estimated_arrive_time"/>
+        <property name="estimated_depart_time"/>
+        <property name="arrive_time"/>
+        <property name="depart_time"/>
+        <property name="check_time"/>
+        <property name="stop_time"/>
+        <property name="train_status"/>
+        <property name="AbnormalStatus"/>
+        <property name="AbnormalCause"/>
+        <property name="AbnormalTime"/>
+         <many-to-one name="StartStation" class="fyp.tingli.model.RSta" fetch="select" lazy="false">
+          <column name= "StartStation"/>
+        </many-to-one>
+         <many-to-one name="TerminalStation" class="fyp.tingli.model.RSta" fetch="select" lazy="false">
+          <column name= "TerminalStation"/>
+        </many-to-one>
+    </class>  
+</hibernate-mapping>
